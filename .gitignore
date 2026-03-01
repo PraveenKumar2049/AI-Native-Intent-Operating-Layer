@@ -1,0 +1,22 @@
+# Secrets
+.env
+
+# Python
+__pycache__/
+*.pyc
+
+# Database
+*.db
+
+# Logs
+logs/
+
+# Temp files
+*.wav
+
+# Models
+models/
+
+# OS
+.DS_Store
+Thumbs.db

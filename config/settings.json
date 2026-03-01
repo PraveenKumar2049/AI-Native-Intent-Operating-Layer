@@ -1,0 +1,33 @@
+{
+  "llm_url": "http://localhost:1234/v1/chat/completions",
+  "model_name": "qwen2.5-7b-instruct",
+
+  "email": {
+    "address": "",
+    "app_password": "",
+    "imap_server": "imap.gmail.com",
+    "smtp_server": "smtp.gmail.com",
+    "smtp_port": 587
+  },
+
+  "allowed_apps": [
+    "firefox",
+    "chrome",
+    "code",
+    "gedit",
+    "notepad",
+    "brave",
+    "terminal",
+    "word",
+    "excel",
+    "powerpoint",
+    "outlook",
+    "setting",
+    "camera",
+    "calculator",
+    "clock",
+    "file explorer",
+    "microsoft edge",
+    "whatsapp"
+  ]
+}

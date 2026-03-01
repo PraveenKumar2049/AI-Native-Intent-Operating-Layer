@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>ZeroTouch</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <div class="background-glow"></div>
+
+    <!-- ================= MAIN GRID LAYOUT ================= -->
+    <div id="layout" class="layout">
+
+        <!-- ================= SIDEBAR ================= -->
+        <aside id="sidebar" class="sidebar">
+
+            <div class="brand">ZeroTouch</div>
+
+            <button class="new-chat-btn" onclick="createSession()">
+                + New Chat
+            </button>
+
+            <div id="chatHistory" class="chat-history"></div>
+
+        </aside>
+
+
+        <!-- ================= MAIN AREA ================= -->
+        <main class="main">
+
+            <!-- Sidebar Toggle (ALWAYS visible) -->
+            <button class="sidebar-toggle" aria-label="Toggle Sidebar" onclick="toggleSidebar()">
+                ☰
+            </button>
+
+            <!-- CHAT CONTAINER -->
+            <section id="chatContainer" class="chat-container">
+
+                <!-- Welcome Block -->
+                <div id="welcomeBlock" class="welcome-block">
+                    <h1>ZeroTouch</h1>
+                    <p>Intelligent Operating Layer</p>
+                </div>
+
+            </section>
+
+            <!-- ================= INPUT DOCK ================= -->
+            <div id="dockWrapper" class="dock-wrapper centered">
+
+                <div id="inputDock" class="input-dock">
+
+                    <!-- Upload Button -->
+                    <button class="icon-btn" title="Upload File" onclick="handleUpload()">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 5v14M5 12h14" />
+                        </svg>
+                    </button>
+
+                    <!-- Text Input -->
+                    <input id="messageInput" placeholder="Message ZeroTouch..." autocomplete="off" spellcheck="false"
+                        onkeydown="handleKey(event)" />
+
+                    <!-- Microphone Button -->
+                    <button class="icon-btn" title="Voice Input" onclick="handleMic()">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 3a3 3 0 0 1 3 3v6a3 3 0 0 1-6 0V6a3 3 0 0 1 3-3z" />
+                            <path d="M19 10a7 7 0 0 1-14 0" />
+                            <path d="M12 17v4" />
+                            <path d="M8 21h8" />
+                        </svg>
+                    </button>
+
+                    <!-- Send Button -->
+                    <button class="send-btn" title="Send" onclick="sendMessage()">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M3 11l18-8-8 18-2-7-8-3z" />
+                        </svg>
+                    </button>
+
+                </div>
+
+            </div>
+
+        </main>
+    </div>
+
+    <!-- ✅ Markdown Renderer (SAFE ADDITION) -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+    <!-- Existing App Script -->
+    <script src="/static/app.js"></script>
+
+</body>
+
+</html>
